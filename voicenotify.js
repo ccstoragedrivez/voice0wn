@@ -72,7 +72,7 @@ bot.on('voiceStateUpdate', async (oldState, state) => {
 
             if (dbChannelData.roles != undefined) rolesList = dbChannelData.roles.map(el => ' <@&' + el + '>'); //mention roles
 
-            textChannel.send(`:microphone2: A voice chat is taking place in the "${voiceChannel.name}" channel !\n${rolesList}`) //send message
+            textChannel.send(`:microphone2: A voice chat is taking place in the "${voiceChannel.name}" channel ! ${rolesList}`) //send message
 			//bot.channels.get('442466223960096770').send('There are now more than 2 people in a voice channel');
 	
             /*const embedObj = {
