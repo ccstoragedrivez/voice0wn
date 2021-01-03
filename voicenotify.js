@@ -60,7 +60,7 @@ bot.on('voiceStateUpdate', async (oldState, state) => {
 
             if (voiceChannel.members.array().length < dbChannelData.min) return; //return if threshold is not reached
 
-            if (Date.now() - lastJoinTime.get(voiceChannel.id) < 90 * 60 * 1000) return lastJoinTime.set(voiceChannel.id, Date.now()); //return if last join is >30m ago + update last join
+            if (Date.now() - lastJoinTime.get(voiceChannel.id) < 1) return lastJoinTime.set(voiceChannel.id, Date.now()); //return if last join is >30m ago + update last join
 
             lastJoinTime.set(voiceChannel.id, Date.now()); //update last join
 
